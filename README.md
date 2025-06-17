@@ -1,5 +1,6 @@
 # Train Simulator CLI
 Terminal-Based Train Simulator for the Pakenham Line
+
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
 
 ## Overview
@@ -10,11 +11,17 @@ This terminal-based train simulator provides a simulated command-line experience
 
 ---
 
+## Main Menu
+
+![readme-images/Main-Menu.png]
+
+---
+
 ## Features
 
 * **Line Simulation**: Simulates the Pakenham line from Flinders Street to Pakenham, including intermediate stations.
 * **Train Configuration**: Create and delete train carriages, toggle direction and train line of choice.
-* **Station Configuration**: Edit the passenger demend for each platform. for each time session of the day, add or rem,aove station platforms.
+* **Station Configuration**: Edit the passenger demend for each platform. for each time session of the day, add or remove station platforms.
 * **Passenger Data**: Read and parse CSV files containing historical passenger counts per station, per hour.
 * **Custom Schedules**: Define time session, each with their own data.
 * **Real-time Statistics**: Display on-demand stats such as CO2 Emissions (overall and specific to train sections (locomotives/carriages)), passengers left behind, total passengers carried, and the number of complaints.
@@ -106,7 +113,7 @@ All tests were created and executed using the Eclipse IDE’s built-in JUnit sup
 Train-Simulator-CLI/
 │
 └── src/
-    ├── db/							# Directory containing train station CSV data
+    ├── db/								# Directory containing train station CSV data
     └── src/                        
         └── trainSimulation/            # Controller logic for routes
         	├── Carriage.java           # Carriage object, handles passenger count (traversing)
