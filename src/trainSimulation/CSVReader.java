@@ -12,7 +12,7 @@ import java.util.Map;
 
 /*
  * The CSVReader class manages all external CSV files.
- * The class provides the ability top read and process these files.
+ * The class provides the ability to read and process these files.
  * 
  * @author Noah Bakr | s4095646 | Basic
  * @version 1.0

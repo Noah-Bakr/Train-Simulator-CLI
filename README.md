@@ -1,7 +1,8 @@
-**Train Simulator CLI**
+# Train Simulator CLI
 Terminal-Based Train Simulator for the Pakenham Line
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
 
-**Overview**
+## Overview
 This terminal-based train simulator provides a simulated command-line experience of a train operating along Melbourne’s Pakenham line. Built in Java with Eclipse and thoroughly tested using JUnit, the simulator derives passenger count data from CSV files and offers train customisation and statistical reporting.
 
 > [!NOTE]  
@@ -49,7 +50,7 @@ This terminal-based train simulator provides a simulated command-line experience
 3. **Build & Run**
 
    * Use `mvn clean install` or your IDE’s build function.
-   * Run the `Main.java` class from the `src/main/java` folder.
+   * Run the `Main.java` class from the `src/trainSimulation` folder.
 
 ---
 
@@ -85,77 +86,40 @@ This terminal-based train simulator provides a simulated command-line experience
 
 ---
 
-## Customization Options
-
-* **Train Parameters**: Adjust number of cars, passenger capacity, acceleration/deceleration rates.
-* **Schedule Settings**: Modify departure intervals, dwell times at each station.
-* **Delay Injection**: Introduce random or scheduled delays to test resilience.
-* **Output Formats**: Switch between table view, CSV export, or JSON summary.
-
----
-
-## Data Input (CSV Format)
-
-The simulator expects passenger counts in CSV format with the following columns:
-
-```
-Station,Hour,PassengerCount
-Flinders Street,06,1200
-Caulfield,06,800
-…
-```
-
-Ensure there are no header typos and all data rows use valid station names matching the internal station list.
-
----
-
 ## Testing
 
-Run the full suite of JUnit tests to verify components:
+All tests were created and executed using the Eclipse IDE’s built-in JUnit support (JUnit 5). To run the test suite:
+
+1. Open the project in Eclipse.
+
+2. Navigate to the src/trainSimulation/tests.java file.
+
+3. Right-click on the test file.
+
+4. Select `Run As`, `JUnit Test`.
+
+---
+
+## Project Structure
 
 ```bash
-mvn test
+Train-Simulator-CLI/
+│
+└── src/
+    ├── db/							# Directory containing train station CSV data
+    └── src/                        
+        └── trainSimulation/            # Controller logic for routes
+        	├── Carriage.java           # Carriage object, handles passenger count (traversing)
+        	├── CSVReader.java          # Manages the reading and processing of all external CSV files
+       	 	├── Locomotive.java         # Train engine object
+        	├── Main.java               # Entry point of the console program
+        	├── Menu.java               # Handler for each menu screen/prompt
+        	├── Platform.java           # Platform object for train stations, handles passenger count (idle)
+        	├── SimulationData.java     # Last simulation statistics handler
+        	├── Tests.java              # JUnit tests
+        	├── Train.java              # Train object, handles carriages and locomotives
+        	├── TrainLine.java          # Handles multiple routes of a single train line
+        	├── TrainRoute.java         # Handles the journey of the train (station order)
+        	├── TrainStation.java       # Train station object, handles respective platforms
+        	└── TrainSystem.java        # Handles all registered train lines
 ```
-
-Key test packages:
-
-* `com.simulator.model` – Train, Station, Schedule classes
-* `com.simulator.io` – CSV parser and data loader
-* `com.simulator.stats` – Statistical analysis modules
-
----
-
-## Future Enhancements
-
-* **Graphical Front-End**: Develop a simple Swing or JavaFX GUI.
-* **Live Data Integration**: Connect to real-time APIs for passenger flow.
-* **Multi-Line Support**: Expand beyond the Pakenham line to cover the full metropolitan network.
-
----
-
-## Contributing
-
-Contributions are welcome! To contribute:
-
-1. Fork the repository.
-2. Create a feature branch (`git checkout -b feature/YourFeature`).
-3. Commit your changes (`git commit -m 'Add Your Feature'`).
-4. Push to the branch (`git push origin feature/YourFeature`).
-5. Open a Pull Request.
-
----
-
-## License
-
-This project is licensed under the MIT License. See `LICENSE` for more details.
-
----
-
-## Contact
-
-**Author**: Your Name
-**Email**: [your.email@example.com](mailto:your.email@example.com)
-**GitHub**: [https://github.com/yourusername](https://github.com/yourusername)
-
-Feel free to reach out with any questions or suggestions!
-
