@@ -111,9 +111,9 @@ All tests were created and executed using the Eclipse IDE’s built-in JUnit sup
 Train-Simulator-CLI/
 │
 └── src/
-    ├── db/								# Directory containing train station CSV data
+    ├── db/				    # Directory containing train station CSV data
     └── src/                        
-        └── trainSimulation/            # Controller logic for routes
+        └── trainSimulation/                # Controller logic for routes
         	├── Carriage.java           # Carriage object, handles passenger count (traversing)
         	├── CSVReader.java          # Manages the reading and processing of all external CSV files
        	 	├── Locomotive.java         # Train engine object
