@@ -1,19 +1,14 @@
 # Train Simulator CLI
-Terminal-Based Train Simulator for the Pakenham Line
 
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
 
-## Overview
 This terminal-based train simulator provides a simulated command-line experience of a train operating along Melbourne’s Pakenham line. Built in Java with Eclipse and thoroughly tested using JUnit, the simulator derives passenger count data from CSV files and offers train customisation and statistical reporting.
-
-> [!NOTE]  
-> The train line does not contain every station.
 
 ---
 
 ## Main Menu
 
-![readme-images/Main-Menu.png]
+![main menu](readme-images/Main-Menu.png)
 
 ---
 
@@ -26,6 +21,9 @@ This terminal-based train simulator provides a simulated command-line experience
 * **Custom Schedules**: Define time session, each with their own data.
 * **Real-time Statistics**: Display on-demand stats such as CO2 Emissions (overall and specific to train sections (locomotives/carriages)), passengers left behind, total passengers carried, and the number of complaints.
 * **JUnit Test Suite**: Comprehensive automated tests covering core functionality, data parsing, and statistical calculations.
+
+> [!NOTE]  
+> The train line does not contain every station.
 
 ---
 
