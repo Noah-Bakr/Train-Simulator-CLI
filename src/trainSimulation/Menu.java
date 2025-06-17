@@ -1320,11 +1320,11 @@ public class Menu {
 	    	
 	    	System.out.println("Train is moving towards: " + currentStation + " Station");
 	    	train.setTrainState(TRAIN_STATE.MOVING);
-	    	///wait(2000); //2 second timeout
+	    	wait(2000); //2 second timeout
 	    	
 	    	System.out.println("Train is stopping at: " + currentStation + " Station");
 	    	train.setTrainState(TRAIN_STATE.STOPPING);
-	    	///wait(1000);
+	    	wait(1000);
 	    	
 	    	//Direction utilization
 	    	if (inbound) {
@@ -1335,15 +1335,15 @@ public class Menu {
 	    	
 	    	//Unload passengers
 	    	System.out.println("Passengers to unload: " + passengerCount);
-	    	///wait(1000);
+	    	wait(1000);
 	    	System.out.println("Unloading Passengers at " + currentStation + " Station"); 
 	    	train.setTrainState(TRAIN_STATE.UNLOADING);
 	    	currentStation.getPlatforms().get(platformIndex).unloadPassengersToPlatform(train, passengerCount);
-	    	///wait(3000);
+	    	wait(3000);
 	    	
 	    	System.out.println(banner + "\n" + "New Train State" + "\n" + banner);
 	    	train.printCurrentState();
-	    	///wait(3000);
+	    	wait(3000);
 	    	
 	    	if (inbound) {
 	    		passengerCount = currentStation.getPassengerCountSessionINBOUND(currentSession, ACTIVITY.LOAD);
@@ -1353,15 +1353,15 @@ public class Menu {
 	    	
 	    	//Load passengers
 	    	System.out.println("Passengers to load: " + passengerCount);
-	    	///wait(1000);
+	    	wait(1000);
 	    	System.out.println("Loading Passengers at " + currentStation + " Station");
 	    	train.setTrainState(TRAIN_STATE.LOADING);
 	    	currentStation.getPlatforms().get(platformIndex).loadPassengersFromPlatform(train, passengerCount);
-	    	///wait(3000);
+	    	wait(3000);
 
 	    	System.out.println(banner + "\n" + "New Train State" + "\n" + banner);
 	    	train.printCurrentState();
-	    	///wait(3000);
+	    	wait(3000);
 	    	
 	        System.out.println(currentStation + " Station has been processed. ");
 	        
